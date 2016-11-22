@@ -71,7 +71,7 @@
 
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
   
-  BOOL isHaveMapAPP = [[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"iosamap//"]];
+  BOOL isHaveMapAPP = [[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"iosamap://"]];
   
   if ([[[request.URL absoluteString] substringToIndex:23] isEqualToString:@"http://itunes.apple.com"]) {
     
@@ -79,7 +79,7 @@
     
     
     if (isHaveMapAPP) {
-      NSURL *url = [NSURL URLWithString:@"http://m.amap.com/?from=39.997361,116.478346(from)&to=39.966577,116.3246(to)"];
+      NSURL *url = [NSURL URLWithString:_urlStr];
       NSURLRequest *request = [NSURLRequest requestWithURL:url];
       [webView loadRequest:request];
       return NO;

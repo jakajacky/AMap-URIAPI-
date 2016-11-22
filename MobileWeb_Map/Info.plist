@@ -34,6 +34,7 @@
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>mo</string>
+		<string>iosamap</string>
 	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>

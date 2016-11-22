@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F26822D01DE3DB0100B6DB80 /* WebViewProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = F26822CF1DE3DB0100B6DB80 /* WebViewProxy.m */; };
+		F26822D61DE40FB200B6DB80 /* AMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = F26822D51DE40FB200B6DB80 /* AMapView.m */; };
 		F279AFB41DE2E1AB003050A8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F279AFB31DE2E1AB003050A8 /* main.m */; };
 		F279AFB71DE2E1AB003050A8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F279AFB61DE2E1AB003050A8 /* AppDelegate.m */; };
 		F279AFBA1DE2E1AB003050A8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F279AFB91DE2E1AB003050A8 /* ViewController.m */; };
@@ -16,6 +18,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F26822CE1DE3DB0100B6DB80 /* WebViewProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewProxy.h; sourceTree = "<group>"; };
+		F26822CF1DE3DB0100B6DB80 /* WebViewProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewProxy.m; sourceTree = "<group>"; };
+		F26822D41DE40FB200B6DB80 /* AMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMapView.h; sourceTree = "<group>"; };
+		F26822D51DE40FB200B6DB80 /* AMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMapView.m; sourceTree = "<group>"; };
 		F279AFAF1DE2E1AB003050A8 /* MobileWeb_Map.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobileWeb_Map.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F279AFB31DE2E1AB003050A8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F279AFB51DE2E1AB003050A8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -39,6 +45,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F26822CD1DE3DB0100B6DB80 /* WebViewProxy */ = {
+			isa = PBXGroup;
+			children = (
+				F26822CE1DE3DB0100B6DB80 /* WebViewProxy.h */,
+				F26822CF1DE3DB0100B6DB80 /* WebViewProxy.m */,
+			);
+			path = WebViewProxy;
+			sourceTree = "<group>";
+		};
 		F279AFA61DE2E1AB003050A8 = {
 			isa = PBXGroup;
 			children = (
@@ -62,7 +77,10 @@
 				F279AFB61DE2E1AB003050A8 /* AppDelegate.m */,
 				F279AFB81DE2E1AB003050A8 /* ViewController.h */,
 				F279AFB91DE2E1AB003050A8 /* ViewController.m */,
+				F26822D41DE40FB200B6DB80 /* AMapView.h */,
+				F26822D51DE40FB200B6DB80 /* AMapView.m */,
 				F279AFBB1DE2E1AB003050A8 /* Main.storyboard */,
+				F26822CD1DE3DB0100B6DB80 /* WebViewProxy */,
 				F279AFBE1DE2E1AB003050A8 /* Assets.xcassets */,
 				F279AFC01DE2E1AB003050A8 /* LaunchScreen.storyboard */,
 				F279AFC31DE2E1AB003050A8 /* Info.plist */,
@@ -151,6 +169,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F26822D01DE3DB0100B6DB80 /* WebViewProxy.m in Sources */,
+				F26822D61DE40FB200B6DB80 /* AMapView.m in Sources */,
 				F279AFBA1DE2E1AB003050A8 /* ViewController.m in Sources */,
 				F279AFB71DE2E1AB003050A8 /* AppDelegate.m in Sources */,
 				F279AFB41DE2E1AB003050A8 /* main.m in Sources */,
@@ -316,6 +336,7 @@
 				F279AFC81DE2E1AB003050A8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

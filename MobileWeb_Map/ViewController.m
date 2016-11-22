@@ -7,12 +7,13 @@
 //
 
 #import "ViewController.h"
+#import "AMapView.h"
 
 @interface ViewController () <UIWebViewDelegate>
 
-  @property (strong, nonatomic) IBOutlet UIWebView *webView;
-  
-  
+@property (strong, nonatomic) IBOutlet UIWebView *webView;
+@property (strong, nonatomic) UIButton *reloadBtn;
+@property (strong, nonatomic) AMapView *map;
 @end
 
 @implementation ViewController
@@ -20,11 +21,31 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
   
-  NSURL *url = [NSURL URLWithString:@"http://m.amap.com/?from=39.997361,116.478346(from)&to=39.966577,116.3246(to)"];
-  NSURLRequest *request = [NSURLRequest requestWithURL:url];
-  [_webView loadRequest:request];
+  _map = [[AMapView alloc] initWithFrame:self.view.frame];
+  [self.view addSubview:_map];
+  CLLocationCoordinate2D start;
+  CLLocationCoordinate2D end;
+  start.latitude  = 39.997361;
+  start.longitude = 116.478346;
+  end.latitude    = 39.966577;
+  end.longitude   = 116.3246;
+  [_map setStartCoordinate:start StartPlace:@"我的位置" EndCoordinate:end endPlace:@"目标医院"];
+  
+//  NSURL *url = [NSURL URLWithString:@"http://m.amap.com/?from=39.997361,116.478346(from)&to=39.966577,116.3246(to)"];
+//  NSURLRequest *request = [NSURLRequest requestWithURL:url];
+//  [_webView loadRequest:request];
+  
+  _reloadBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+  _reloadBtn.frame = CGRectMake(self.view.frame.size.width - 50, 145.0, 35, 35);
+  [_reloadBtn setImage:[UIImage imageNamed:@"reload"] forState:UIControlStateNormal];
+  //    [_reloadBtn setBackgroundImage: forState:UIControlStateNormal];
+  [self.view addSubview:_reloadBtn];
+  [_reloadBtn addTarget:self action:@selector(reload) forControlEvents:UIControlEventTouchUpInside];
 }
 
+- (void)reload {
+  [_map updateMapView];
+}
 
 - (void)didReceiveMemoryWarning {
   [super didReceiveMemoryWarning];

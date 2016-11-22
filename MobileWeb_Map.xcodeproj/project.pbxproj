@@ -8,7 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		F26822D01DE3DB0100B6DB80 /* WebViewProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = F26822CF1DE3DB0100B6DB80 /* WebViewProxy.m */; };
-		F26822D61DE40FB200B6DB80 /* AMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = F26822D51DE40FB200B6DB80 /* AMapView.m */; };
+		F26822D81DE42B9700B6DB80 /* reload@2x_.png in Resources */ = {isa = PBXBuildFile; fileRef = F26822D71DE42B9700B6DB80 /* reload@2x_.png */; };
+		F26822DA1DE4300800B6DB80 /* reload@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F26822D91DE4300800B6DB80 /* reload@2x.png */; };
+		F26822DF1DE440A400B6DB80 /* AMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = F26822DE1DE440A400B6DB80 /* AMapView.m */; };
 		F279AFB41DE2E1AB003050A8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F279AFB31DE2E1AB003050A8 /* main.m */; };
 		F279AFB71DE2E1AB003050A8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F279AFB61DE2E1AB003050A8 /* AppDelegate.m */; };
 		F279AFBA1DE2E1AB003050A8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F279AFB91DE2E1AB003050A8 /* ViewController.m */; };
@@ -20,8 +22,10 @@
 /* Begin PBXFileReference section */
 		F26822CE1DE3DB0100B6DB80 /* WebViewProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewProxy.h; sourceTree = "<group>"; };
 		F26822CF1DE3DB0100B6DB80 /* WebViewProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewProxy.m; sourceTree = "<group>"; };
-		F26822D41DE40FB200B6DB80 /* AMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMapView.h; sourceTree = "<group>"; };
-		F26822D51DE40FB200B6DB80 /* AMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMapView.m; sourceTree = "<group>"; };
+		F26822D71DE42B9700B6DB80 /* reload@2x_.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "reload@2x_.png"; sourceTree = "<group>"; };
+		F26822D91DE4300800B6DB80 /* reload@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "reload@2x.png"; sourceTree = "<group>"; };
+		F26822DD1DE440A400B6DB80 /* AMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMapView.h; sourceTree = "<group>"; };
+		F26822DE1DE440A400B6DB80 /* AMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMapView.m; sourceTree = "<group>"; };
 		F279AFAF1DE2E1AB003050A8 /* MobileWeb_Map.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobileWeb_Map.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F279AFB31DE2E1AB003050A8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F279AFB51DE2E1AB003050A8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -54,6 +58,15 @@
 			path = WebViewProxy;
 			sourceTree = "<group>";
 		};
+		F26822DC1DE440A400B6DB80 /* AMapView */ = {
+			isa = PBXGroup;
+			children = (
+				F26822DD1DE440A400B6DB80 /* AMapView.h */,
+				F26822DE1DE440A400B6DB80 /* AMapView.m */,
+			);
+			path = AMapView;
+			sourceTree = "<group>";
+		};
 		F279AFA61DE2E1AB003050A8 = {
 			isa = PBXGroup;
 			children = (
@@ -77,8 +90,9 @@
 				F279AFB61DE2E1AB003050A8 /* AppDelegate.m */,
 				F279AFB81DE2E1AB003050A8 /* ViewController.h */,
 				F279AFB91DE2E1AB003050A8 /* ViewController.m */,
-				F26822D41DE40FB200B6DB80 /* AMapView.h */,
-				F26822D51DE40FB200B6DB80 /* AMapView.m */,
+				F26822DC1DE440A400B6DB80 /* AMapView */,
+				F26822D71DE42B9700B6DB80 /* reload@2x_.png */,
+				F26822D91DE4300800B6DB80 /* reload@2x.png */,
 				F279AFBB1DE2E1AB003050A8 /* Main.storyboard */,
 				F26822CD1DE3DB0100B6DB80 /* WebViewProxy */,
 				F279AFBE1DE2E1AB003050A8 /* Assets.xcassets */,
@@ -156,6 +170,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F26822DA1DE4300800B6DB80 /* reload@2x.png in Resources */,
+				F26822D81DE42B9700B6DB80 /* reload@2x_.png in Resources */,
 				F279AFC21DE2E1AB003050A8 /* LaunchScreen.storyboard in Resources */,
 				F279AFBF1DE2E1AB003050A8 /* Assets.xcassets in Resources */,
 				F279AFBD1DE2E1AB003050A8 /* Main.storyboard in Resources */,
@@ -170,8 +186,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F26822D01DE3DB0100B6DB80 /* WebViewProxy.m in Sources */,
-				F26822D61DE40FB200B6DB80 /* AMapView.m in Sources */,
 				F279AFBA1DE2E1AB003050A8 /* ViewController.m in Sources */,
+				F26822DF1DE440A400B6DB80 /* AMapView.m in Sources */,
 				F279AFB71DE2E1AB003050A8 /* AppDelegate.m in Sources */,
 				F279AFB41DE2E1AB003050A8 /* main.m in Sources */,
 			);

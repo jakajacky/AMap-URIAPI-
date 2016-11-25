@@ -73,28 +73,26 @@
   
   BOOL isHaveMapAPP = [[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"iosamap://"]];
   
-  if ([[[request.URL absoluteString] substringToIndex:23] isEqualToString:@"http://itunes.apple.com"]) {
+  NSLog(@"---%@---", webView.request.URL);
+  if ([[request.URL absoluteString] isEqualToString:@"http://wap.amap.com/?from=m&type=m"]) {
     
-    
-    
-    
-    if (isHaveMapAPP) {
-      NSURL *url = [NSURL URLWithString:_urlStr];
-      NSURLRequest *request = [NSURLRequest requestWithURL:url];
-      [webView loadRequest:request];
-      return NO;
-    }
-    else {
-      static dispatch_once_t onceToken;
-      dispatch_once(&onceToken, ^{
-        [webView loadRequest:request];
-      });
+    if (!isHaveMapAPP) {
+      UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"设备未安装”高德地图HD“，请先前往APP Store下载应用" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"前往下载", nil];
+      [alert show];
       
-      
-      return YES;
     }
+    return NO;
   }
   return YES;
 }
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+  if (buttonIndex == 1) {
+    NSString *urlStr = @"itms-apps://itunes.apple.com/us/app/gao-de-de-tuhd/id562136065?mt=8";
+    NSURL *url = [NSURL URLWithString:urlStr];
+    [[UIApplication sharedApplication] openURL:url];
+  }
+}
+
 
 @end
